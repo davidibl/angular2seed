@@ -20,7 +20,9 @@ export class BasicRemoteServiceWithCache {
     }
 
     public getExampleData(): ReplaySubject<Array<ExampleModel>> {
-
+let x:string = "";
+let y: Array<string>;
+y.map(str => str.split(" ")).filter(arrtemp => x.replace(" ", ".+").match(arrtemp.reduce((a, b) => a += b)) != null);
         if (this._dataCache === null) {
             this._examplesSubject.next(new Array<ExampleModel>());
             this.getRemoteExamples();
